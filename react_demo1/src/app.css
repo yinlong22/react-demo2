@@ -1,7 +1,20 @@
-body{
-    margin: 0;
-    padding: 0;
+.App {
+    text-align: center;
+}
+
+.nav {
+    position: absolute;
+    right: 0;
+    justify-content: space-between;
+    background: linear-gradient(286.21deg, #4E76FF 4.51%, #3DA6FF 95.49%);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+a {
+    right: auto;
+    color: azure;
+    text-decoration:none;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 12px;
 }

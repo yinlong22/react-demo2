@@ -1,24 +1,20 @@
-import Index from './test'
-import React from "react";
+import './App.css';
+import {BrowserRouter, Route} from "react-router-dom";
+import Gongshi from "./demo/gongshi";
+import {Home} from "./demo/Home";
 
-const LazyComponent =  React.lazy(()=> new Promise((resolve)=>{
-    setTimeout(()=>{
-        resolve({
-            default: ()=> <Index />
-        })
-    },2000)
-}))
 
 function App() {
-  return (
-    <div className="App">
-        <div className="context_box"  style={ { marginTop :'50px' } }   >
-            <React.Suspense fallback={ <div className="icon" >懒加载前</div> } >
-                <LazyComponent />
-            </React.Suspense>
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Home/>
+                <Route exact path="/"/>
+                <Route path="/Gongshi" component={Gongshi}/>
+            </BrowserRouter>
+            <div className='showDemos'/>
         </div>
-    </div>
-  );
+    );
 }
 
 export default App;
