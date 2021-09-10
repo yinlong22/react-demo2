@@ -1,4 +1,4 @@
-import './App.css';
+import './app.css';
 import {BrowserRouter, Route} from "react-router-dom";
 import Gongshi from "./demo/gongshi";
 import {Home} from "./demo/Home";
